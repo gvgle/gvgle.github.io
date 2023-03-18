@@ -1,5 +1,5 @@
-。
-// 定义角色
+
+<// 定义角色
 const roles = [
   { name: '神', power: 10 },
   { name: '祭祀', power: 3 },
@@ -63,7 +63,7 @@ async function main() {
   const opponent = getRandomOpponent();
   console.log(`你选择了${player.name}，你的对手是${opponent.name}。`);
   comparePower(player, opponent);
-}
+}/ ＞
 
 // 开始游戏
 main();
