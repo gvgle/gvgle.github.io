@@ -38,9 +38,9 @@ function attack(attacker, defender) {
   const damage = attacker.attack - defender.defense;
   if (damage > 0) {
     defender.health -= damage;
-    console.log(“${attacker.name} attacked ${defender.name} and dealt ${damage} damage.”);
+    console.log("${attacker.name} attacked ${defender.name} and dealt ${damage} damage.");
   } else {
-    console.log(${attacker.name} attacked ${defender.name} but did no damage.);
+    console.log("${attacker.name} attacked ${defender.name} but did no damage.");
   }
 }
 
