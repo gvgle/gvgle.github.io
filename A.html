@@ -38,16 +38,16 @@ function attack(attacker, defender) {
   const damage = attacker.attack - defender.defense;
   if (damage > 0) {
     defender.health -= damage;
-    console.log("${attacker.name} attacked ${defender.name} and dealt ${damage} damage.");
+    alert("${attacker.name} attacked ${defender.name} and dealt ${damage} damage.");
   } else {
-    console.log("${attacker.name} attacked ${defender.name} but did no damage.");
+    alert("${attacker.name} attacked ${defender.name} but did no damage.");
   }
 }
 
-console.log("Welcome to the game!");
+alert("Welcome to the game!");
 
 attack(warrior, ghost);
 attack(priest, warrior);
-attack(civilian, ghost);
-console.log(god); 
+attack(civilian, ghost)
+alert(god); 
 </script>
