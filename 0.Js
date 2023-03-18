@@ -1,5 +1,5 @@
 
-const roles = [
+<const roles = [
   { name: '神', power: 10 },
   { name: '祭祀', power: 3 },
   { name: '鬼', power: 6 },
@@ -57,6 +57,6 @@ async function main() {
   const opponent = getRandomOpponent();
   console.log(`你选择了${player.name}，你的对手是${opponent.name}。`);
   comparePower(player, opponent);
-}/ ＞
+}
 
-main();
+main();/>
