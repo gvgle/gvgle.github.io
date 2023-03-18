@@ -1,5 +1,4 @@
 
-<// 定义角色
 const roles = [
   { name: '神', power: 10 },
   { name: '祭祀', power: 3 },
@@ -9,12 +8,10 @@ const roles = [
   { name: '平民', power: 1 },
 ];
 
-// 随机选择对手
 function getRandomOpponent() {
   return roles[Math.floor(Math.random() * roles.length)];
 }
 
-// 显示角色列表
 function displayRoles() {
   console.log('请选择一个角色：');
   roles.forEach((role, index) => {
@@ -22,7 +19,6 @@ function displayRoles() {
   });
 }
 
-// 获取用户输入
 function getUserInput() {
   return new Promise((resolve) => {
     const readline = require('readline');
@@ -46,7 +42,6 @@ function getUserInput() {
   });
 }
 
-// 比较玩家和对手的力量
 function comparePower(player, opponent) {
   if (player.power > opponent.power) {
     console.log(`恭喜！${player.name}击败了${opponent.name}！`);
@@ -57,7 +52,6 @@ function comparePower(player, opponent) {
   }
 }
 
-// 游戏主循环
 async function main() {
   const player = await getUserInput();
   const opponent = getRandomOpponent();
@@ -65,5 +59,4 @@ async function main() {
   comparePower(player, opponent);
 }/ ＞
 
-// 开始游戏
 main();
