@@ -1,0 +1,51 @@
+import random
+
+# 定义房间和门的状态
+room_locked = True
+door_locked = True
+
+# 定义房间和门的密码
+room_password = str(random.randint(1000, 9999))
+door_password = str(random.randint(1000, 9999))
+
+# 定义提示信息
+room_hint = f"The password to unlock the room is a 4-digit number between 1000 and 9999. Hint: {room_password[0]} is the first digit."
+door_hint = f"The password to unlock the door is a 4-digit number between 1000 and 9999. Hint: {door_password[-1]} is the last digit."
+
+# 定义游戏主循环
+while True:
+    # 输出房间和门的状态
+    print("You are in a locked room.")
+    if room_locked:
+        print("The room is locked.")
+        print(room_hint)
+    else:
+        print("The room is unlocked.")
+    if door_locked:
+        print("The door is locked.")
+        print(door_hint)
+    else:
+        print("The door is unlocked.")
+        print("Congratulations! You have escaped the room.")
+        break
+
+    # 获取用户输入
+    user_input = input("What would you like to do? ")
+
+    # 处理用户输入
+    if user_input == "unlock room":
+        room_password_input = input("Enter the room password: ")
+        if room_password_input == room_password:
+            room_locked = False
+            print("The room is now unlocked.")
+        else:
+            print("Incorrect password. Try again.")
+    elif user_input == "unlock door":
+        door_password_input = input("Enter the door password: ")
+        if door_password_input == door_password:
+            door_locked = False
+            print("The door is now unlocked.")
+        else:
+            print("Incorrect password. Try again.")
+    else:
+        print("Invalid input. Try again.")
